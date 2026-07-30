@@ -15,7 +15,7 @@ require('gitsigns').setup {
     end
 
     -- Navigation
-    map('n', ']c', function()
+    map('n', '<leader>gn', function()
       if vim.wo.diff then
         vim.cmd.normal { ']c', bang = true }
       else
@@ -23,7 +23,7 @@ require('gitsigns').setup {
       end
     end, { desc = 'Jump to next git [c]hange' })
 
-    map('n', '[c', function()
+    map('n', '<leader>gN', function()
       if vim.wo.diff then
         vim.cmd.normal { '[c', bang = true }
       else
