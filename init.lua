@@ -714,6 +714,11 @@ do
       -- You can specify filetypes to autoformat on save here:
       local enabled_filetypes = {
         go = true,
+        rust = true,
+        typescript = true,
+        typescriptreact = true,
+        javascript = true,
+        javascriptreact = true,
         -- lua = true,
         -- python = true,
       }
@@ -728,13 +733,12 @@ do
     },
     -- You can also specify external formatters in here.
     formatters_by_ft = {
-      go = { 'goimports', 'gofmt' }
-      -- rust = { 'rustfmt' },
-      -- Conform can also run multiple formatters sequentially
-      -- python = { "isort", "black" },
-      --
-      -- You can use 'stop_after_first' to run the first available formatter from the list
-      -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      go = { 'goimports' },
+      rust = { 'rustfmt' },
+      typescript = { 'prettierd', 'prettier', stop_after_first = true },
+      typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+      javascript = { "prettierd", "prettier", stop_after_first = true },
+      javascriptreact = { "prettierd", "prettier", stop_after_first = true },
     },
   }
 
