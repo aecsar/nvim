@@ -165,6 +165,11 @@ do
   vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line up' })
   vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line down' })
 
+  vim.keymap.set('n', '<A-l>', '<C-w>>', { desc = 'Pane increase width' })
+  vim.keymap.set('n', '<A-h>', '<C-w><', { desc = 'Pane decrease width' })
+  vim.keymap.set('n', '<A-u>', '<C-w>+', { desc = 'Pane decrease height' })
+  vim.keymap.set('n', '<A-d>', '<C-w>-', { desc = 'Pane decrease height' })
+
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -327,8 +332,8 @@ do
   -- Load the colorscheme here.
   -- Like many other themes, this one has different styles, and you could load
   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  -- vim.cmd.colorscheme 'tokyonight-night'
-  vim.cmd.colorscheme 'catppuccin'
+  vim.cmd.colorscheme 'tokyonight-night'
+  -- vim.cmd.colorscheme 'catppuccin'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
