@@ -635,6 +635,7 @@ do
     -- clangd = {},
     gopls = {},
     buf_ls = {},
+    svelte = {},
     -- pyright = {},
     rust_analyzer = {},
     --
