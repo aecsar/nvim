@@ -170,6 +170,9 @@ do
   vim.keymap.set('n', '<A-u>', '<C-w>+', { desc = 'Pane decrease height' })
   vim.keymap.set('n', '<A-d>', '<C-w>-', { desc = 'Pane decrease height' })
 
+  -- general build cmd
+  vim.keymap.set('n', '<leader>bb', ':!make build<CR>==', {desc = "Build (runs make build)"})
+
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -632,7 +635,7 @@ do
   --  See `:help lsp-config` for information about keys and how to configure
   ---@type table<string, vim.lsp.Config>
   local servers = {
-    -- clangd = {},
+    clangd = {},
     gopls = {},
     buf_ls = {},
     svelte = {},
@@ -733,6 +736,7 @@ do
         typescriptreact = true,
         javascript = true,
         javascriptreact = true,
+        c = true,
         -- lua = true,
         -- python = true,
       }
@@ -747,6 +751,7 @@ do
     },
     -- You can also specify external formatters in here.
     formatters_by_ft = {
+      c = { 'clang-format' },
       go = { 'goimports' },
       rust = { 'rustfmt' },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
