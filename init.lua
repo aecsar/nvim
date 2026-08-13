@@ -171,7 +171,7 @@ do
   vim.keymap.set('n', '<A-d>', '<C-w>-', { desc = 'Pane decrease height' })
 
   -- general build cmd
-  vim.keymap.set('n', '<leader>bb', ':!make build<CR>==', {desc = "Build (runs make build)"})
+  vim.keymap.set('n', '<leader>bb', ':!make build<CR>', {desc = "Build (runs make build)"})
 
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -639,6 +639,7 @@ do
     gopls = {},
     buf_ls = {},
     svelte = {},
+    ols = {},
     -- pyright = {},
     rust_analyzer = {},
     --
@@ -737,6 +738,7 @@ do
         javascript = true,
         javascriptreact = true,
         c = true,
+        odin = true,
         -- lua = true,
         -- python = true,
       }
@@ -754,6 +756,7 @@ do
       c = { 'clang-format' },
       go = { 'goimports' },
       rust = { 'rustfmt' },
+      odin = { 'odinfmt' },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
       typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       javascript = { "prettierd", "prettier", stop_after_first = true },
