@@ -639,6 +639,7 @@ do
     gopls = {},
     buf_ls = {},
     svelte = {},
+    ols = {},
     -- pyright = {},
     rust_analyzer = {},
     --
@@ -738,6 +739,7 @@ do
         javascriptreact = true,
         c = true,
         cpp = true,
+        odin = true,
         -- lua = true,
         -- python = true,
       }
@@ -756,6 +758,7 @@ do
       cpp = { 'clang-format' },
       go = { 'goimports' },
       rust = { 'rustfmt' },
+      odin = { 'odinfmt' },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
       typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       javascript = { "prettierd", "prettier", stop_after_first = true },
