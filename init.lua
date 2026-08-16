@@ -171,7 +171,7 @@ do
   vim.keymap.set('n', '<A-d>', '<C-w>-', { desc = 'Pane decrease height' })
 
   -- general build cmd
-  vim.keymap.set('n', '<leader>bb', ':!make build<CR>==', {desc = "Build (runs make build)"})
+  vim.keymap.set('n', '<leader>bb', ':!make build<CR>', {desc = "Build (runs make build)"})
 
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -737,6 +737,7 @@ do
         javascript = true,
         javascriptreact = true,
         c = true,
+        cpp = true,
         -- lua = true,
         -- python = true,
       }
@@ -752,6 +753,7 @@ do
     -- You can also specify external formatters in here.
     formatters_by_ft = {
       c = { 'clang-format' },
+      cpp = { 'clang-format' },
       go = { 'goimports' },
       rust = { 'rustfmt' },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
