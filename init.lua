@@ -171,7 +171,7 @@ do
   vim.keymap.set('n', '<A-d>', '<C-w>-', { desc = 'Pane decrease height' })
 
   -- general build cmd
-  vim.keymap.set('n', '<leader>bb', ':!make build<CR>', {desc = "Build (runs make build)"})
+  vim.keymap.set('n', '<leader>r', ':!make run<CR>', {desc = "Run (runs 'make build')"})
 
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
