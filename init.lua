@@ -642,6 +642,7 @@ do
     ols = {},
     -- pyright = {},
     rust_analyzer = {},
+    zls = {},
     --
     -- Some languages (like typescript) have entire language plugins that can be useful:
     --    https://github.com/pmizio/typescript-tools.nvim
@@ -740,6 +741,7 @@ do
         c = true,
         cpp = true,
         odin = true,
+        zig = true,
         -- lua = true,
         -- python = true,
       }
@@ -756,6 +758,7 @@ do
     formatters_by_ft = {
       c = { 'clang-format' },
       cpp = { 'clang-format' },
+      zig = { 'zig fmt' },
       go = { 'goimports' },
       rust = { 'rustfmt' },
       odin = { 'odinfmt' },
