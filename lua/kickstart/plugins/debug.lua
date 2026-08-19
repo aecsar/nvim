@@ -121,3 +121,27 @@ dap.configurations.c = {
 
 dap.configurations.cpp = dap.configurations.c
 dap.configurations.rust = dap.configurations.c
+
+local splitStr = function(inputstr)
+  local t = {}
+  for str in string.gmatch(inputstr, "([^%s]+)") do
+    table.insert(t, str)
+  end
+  return t
+end
+
+dap.configurations.zig= {
+  {
+    name = "Run Program",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+    args = function()
+      return splitStr(vim.fn.input('Args: '))
+    end,
+  }
+}
