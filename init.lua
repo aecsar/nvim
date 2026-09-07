@@ -742,6 +742,7 @@ do
         cpp = true,
         odin = true,
         zig = true,
+        proto = true,
         -- lua = true,
         -- python = true,
       }
@@ -762,6 +763,7 @@ do
       go = { 'goimports' },
       rust = { 'rustfmt' },
       odin = { 'odinfmt' },
+      proto = { 'buf format' },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
       typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       javascript = { "prettierd", "prettier", stop_after_first = true },
