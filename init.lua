@@ -686,6 +686,9 @@ do
     },
   }
 
+  vim.pack.add { gh 'windwp/nvim-ts-autotag' }
+  require('nvim-ts-autotag').setup {}
+
   vim.pack.add {
     gh 'neovim/nvim-lspconfig',
     gh 'mason-org/mason.nvim',
